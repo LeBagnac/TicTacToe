@@ -1,0 +1,61 @@
+<html>
+<style>	
+	table {
+		border-collapse: collapse;
+	}
+	td {
+		width: 150px;
+		height: 150px;
+		border: 3px solid #000;
+		text-align: center;		
+		background-color: #f7962d;  /* ffa500 */
+	}
+	#reset {
+		display: none;
+	}
+	
+	#message {
+		font-size: 150%;
+	}
+	
+	body {
+		background-color: 	#f0f5eb;
+
+	}
+	
+	
+	
+</style>
+<script type="text/javascript" src="connection.js"></script>
+<script type="text/javascript" src="board.js"></script>
+<script type="text/javascript" src="game.js"></script>
+<body>
+	<div align = "center" width = "100%"> 
+	<img src = "logo.jpg" border = "0"><br><br><br>
+	<div id="message"></div>
+	<table id="board">
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+	<input type="button" id="reset" value="Play another" />
+	</div>
+<script>
+var table = document.getElementById('board');
+var game = new Game(table);
+game.run();
+</script>
+</body>
+</html>
